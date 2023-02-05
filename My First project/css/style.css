@@ -1,0 +1,366 @@
+html {
+  --first-color: navy;
+  scroll-behavior: smooth;
+}
+/*social*/
+
+.home-social {
+  position: fixed;
+  width: 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.social-icons-list {
+  list-style: none;
+  padding-left: 0;
+}
+.social-icons-list li {
+  font-size: 2rem;
+  padding: 0.2rem 0;
+}
+.home-social-link {
+  color: #bbb;
+}
+.home-social-link:hover {
+  color: var(--first-color);
+  transition: color 0.5s;
+}
+/*end-social*/
+/*home*/
+.home {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 13rem;
+}
+
+.home-img-profile {
+  max-width: 400px;
+  border-radius: 60% 40% 30% 70%;
+}
+.home-info h1 {
+  font-family: Shabnam, tahoma, verdana;
+  text-align: right;
+  font-size: 3rem;
+  line-height: 1.7;
+  font-weight: 600;
+}
+.home-info-name {
+  color: var(--first-color);
+  position: relative;
+}
+.home-info-name::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 0%;
+  background-color: var(--first-color);
+  animation: swipe-in 1s;
+}
+
+@keyframes swipe-in {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+.home-info a {
+  font-family: Shabnam, tahoma, verdana;
+}
+
+.button {
+  background-color: var(--first-color);
+  color: white;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+}
+.button:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.button:active {
+  transform: translate(0.2rem, 0.2rem);
+}
+
+/*end-home*/
+/*section*/
+section {
+  width: 60%;
+  height: 100vh;
+  padding: 0 20%;
+  display: flex;
+  flex-direction: column;
+  font-family: Shabnam, tahoma, verdana;
+}
+.section-title {
+  font-size: 2rem;
+  color: var(--first-color);
+  border-bottom: 2px solid var(--first-color);
+  margin-top: 4rem;
+}
+
+/*end-section*/
+/*about*/
+.about-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.about-img img {
+  width: 250px;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+}
+.about-subtitle,
+.about-text {
+  direction: rtl;
+  line-height: 1.8;
+  margin-right: 6rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.skills-img img {
+  width: 250px;
+  border-radius: 1rem;
+}
+.skills-subtitle,
+.skills-text {
+  direction: rtl;
+  line-height: 1.8;
+}
+.skills-body {
+  margin-left: 6rem;
+  margin-top: -1rem;
+}
+
+.skill-info {
+  display: flex;
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  border-radius: 0.8rem 0.8rem 0.2rem 0.2rem;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  position: relative;
+  margin-top: 1rem;
+}
+.skill-logo {
+  color: var(--first-color);
+  font-size: 2rem;
+}
+.skill-name-logo {
+  display: flex;
+  align-items: center;
+}
+.skill-name-logo * {
+  padding-left: 1rem;
+}
+
+.skill-bar {
+  background-color: var(--first-color);
+  height: 0.25rem;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.css {
+  width: 80%;
+}
+
+.html {
+  width: 90%;
+}
+
+.php {
+  width: 40%;
+}
+.js {
+  width: 60%;
+}
+.wordpress {
+  width: 70%;
+}
+/*progects*/
+
+.project-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+.iamges-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  transition: ALL 1s;
+}
+.project-image:hover {
+  transform: scale(1.4);
+}
+.img-wrapper {
+  overflow: hidden;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form * {
+  font-family: Shabnam, tahoma, verdana;
+  font-size: 1.4rem;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  margin: 0.3rem;
+  direction: rtl;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  height: 4rem;
+  z-index: 100;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+}
+.nav-list ul {
+  font-family: Shabnam, tahoma, verdana;
+  display: flex;
+  list-style: none;
+  direction: rtl;
+}
+.nav-list ul li a {
+  text-decoration: none;
+  padding: 0 0.6rem;
+  color: var(--first-color);
+  font-size: 1.3rem;
+  margin: 0 0.4rem;
+}
+
+.nav-list ul li a:hover {
+  color: purple;
+  transition: color 0.5s;
+}
+
+/*font*/
+@font-face {
+  font-family: Shabnam;
+  src: url("../font/Shabnam-bold.eot");
+  src: url("../font/Shabnam.eot?#iefix") format("embedded-opentype"),
+    url("../font/Shabnam.woff") format("woff"),
+    url("../font/Shabnam.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/*end-font*/
+
+@media (max-width: 1300px) {
+  section {
+    width: 80%;
+    padding: 0 10%;
+  }
+}
+@media (max-width: 1200px) {
+  section {
+    width: 90%;
+    padding: 0 5%;
+    min-height: 100vh;
+  }
+  .home-img-profile {
+    width: 300px;
+  }
+
+  .home-info h1 {
+    font-size: 2.3rem;
+  }
+}
+@media (max-width: 1000px) {
+  .home-info h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    height: auto;
+  }
+  .home-img-profile {
+    width: 200px;
+  }
+}
+@media (max-width: 800px) {
+  .home {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .iamges-container {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  section{
+      width: 80%;
+      padding: 0 10%;
+  }
+  .home{
+      row-gap: 1rem;
+  }
+}
+@media(max-width:600px){
+    .nav-bar{
+        visibility: collapse;
+    }
+    .home-info h1{
+        font-size: 1rem;
+        text-align: center;
+    }
+}
